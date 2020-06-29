@@ -5,20 +5,25 @@
 let g:python_host_prog = '/home/julian/.virtualenvs/vim2/bin/python'
 let g:python3_host_prog = '/home/julian/.virtualenvs/vim/bin/python3'
 
+" Use ALL the colors
+set termguicolors
+
 " Plugins
 call plug#begin()
 
 """ EYECANDY
+" Color scheme
+Plug 'drewtempelmeyer/palenight.vim'
 "
 " Git info in sign column
 Plug 'airblade/vim-gitgutter'
 " Status bar
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-let g:airline_theme='badwolf'
 let g:airline#extensions#tabline#enabled=1
 let g:airline#extensions#tabline#formatter='unique_tail'
 let g:airline_powerline_fonts=1
+let g:airline_theme='palenight'
 " Rainbow colors
 Plug 'luochen1990/rainbow'
 let g:rainbow_active = 1
@@ -87,8 +92,10 @@ set nobackup 	                            " no backup files
 set nowritebackup                           
 set noswapfile 	                            " no swap files
 
-" Set colors for number bar
-highlight LineNr ctermfg=DarkGray ctermbg=Black
+" Color scheme
+set background=dark
+colorscheme palenight
+let g:palenight_terminal_italics=1
 
 " Enable filetype dependent configurations
 :filetype on
