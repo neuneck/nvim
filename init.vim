@@ -34,6 +34,10 @@ nmap " :NERDTreeToggle<CR>
 " Syntax etc for many languages
 Plug 'sheerun/vim-polyglot'
 "
+" Class/function browser
+Plug '/majutsushi/tagbar'
+nmap ' :TagbarToggle<CR>
+"
 " Highlight coverage report lines
 Plug 'mgedmin/coverage-highlight.vim'     " Highlight lines form a coverage report
 nnoremap <c-h> :ToggleCoverage<CR><CR>
