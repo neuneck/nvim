@@ -35,7 +35,7 @@ nmap " :NERDTreeToggle<CR>
 Plug 'sheerun/vim-polyglot'
 "
 " Class/function browser
-Plug '/majutsushi/tagbar'
+Plug 'majutsushi/tagbar'
 nmap ' :TagbarToggle<CR>
 "
 " Highlight coverage report lines
