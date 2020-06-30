@@ -2,8 +2,8 @@
 " Julian Schweizer
 
 " Define the python host program to keep pynvim around
-let g:python_host_prog = '/home/julian/.virtualenvs/vim2/bin/python'
-let g:python3_host_prog = '/home/julian/.virtualenvs/vim/bin/python3'
+let g:python_host_prog = expand('$HOME/.virtualenvs/vim2/bin/python')
+let g:python3_host_prog = expand('$HOME/.virtualenvs/vim/bin/python3')
 
 " Use ALL the colors
 set termguicolors
