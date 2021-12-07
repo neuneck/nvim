@@ -49,10 +49,13 @@ nnoremap <c-h> :ToggleCoverage<CR><CR>
 
 """ CODING
 " Linting etc
+Plug 'psf/black', { 'branch': 'stable' }
+nnoremap <c-B> :Black<CR>
+
 Plug 'dense-analysis/ale'
 let g:ale_fixers = {
     \ '*': ['remove_trailing_lines', 'trim_whitespace'],
-    \ 'python': ['autopep8']
+    \ 'python': ['autopep8', 'remove_trailing_lines', 'trim_whitespace'],
     \}
 let g:ale_linters = {
    \ 'python': ['pyflakes', 'pydocstyle', 'pycodestyle']
@@ -132,7 +135,7 @@ augroup vimrc_autocmds
   autocmd FileType python,rst,c,cpp highlight Excess ctermbg=DarkGrey guibg=Black
   autocmd FileType python,rst,c,cpp match Excess /\%81v.*/
   autocmd FileType python,rst,c,cpp set nowrap
-  autocmd FileType python,rst,c,cpp set colorcolumn=80
+  autocmd FileType python,rst,c,cpp set colorcolumn=88
 augroup END
 
 " Various
