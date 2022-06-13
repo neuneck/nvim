@@ -102,7 +102,7 @@ autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
 
 " No backup/swap files
 set nobackup 	                            " no backup files
-set nowritebackup                           
+set nowritebackup
 set noswapfile 	                            " no swap files
 
 " Color scheme
@@ -116,9 +116,9 @@ let g:palenight_terminal_italics=1
 :filetype indent on
 
 " Make tabs behave
-autocmd FileType python set tabstop=4 softtabstop=4 shiftwidth=4 
-autocmd FileType yaml set tabstop=2 softtabstop=2 shiftwidth=2 
-set expandtab 
+autocmd FileType python set tabstop=4 softtabstop=4 shiftwidth=4
+autocmd FileType yaml set tabstop=2 softtabstop=2 shiftwidth=2
+set expandtab
 set smarttab autoindent
 
 " Persist undo actions beyond a single session
@@ -135,7 +135,7 @@ augroup vimrc_autocmds
   autocmd FileType python,rst,c,cpp highlight Excess ctermbg=DarkGrey guibg=Black
   autocmd FileType python,rst,c,cpp match Excess /\%81v.*/
   autocmd FileType python,rst,c,cpp set nowrap
-  autocmd FileType python,rst,c,cpp set colorcolumn=88
+  autocmd FileType python,rst,c,cpp set colorcolumn=80
 augroup END
 
 " Various
